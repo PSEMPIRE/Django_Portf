@@ -1,0 +1,94 @@
+<!-- Navbar Section -->
+
+{% load static%}
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portf </title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>`
+    
+    <!-- Navbar Section -->
+    <nav id="navbar" class="flex s-around bg-color">
+        <div class="left-nav">
+            <h2 class="t-white">Portfolio</h2>
+        </div>
+        <div class="right-nav">
+            <ul class="flex">
+                <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#about" class="t-white roboto">About Me <i class="fa-solid fa-user"></i></a></li>
+                </ul>
+        </div>
+    </nav>
+
+        
+
+    <!-- Home Section -->
+    <section id="about" class="flex s-around sw-80 m-auto">
+        <div class="home-left flex items-center">
+            <div class="home-content">
+                <h6 class="poppinss">Hi, I'm</h6>
+                <h1 class="t-white">{{about.name}}</h1>
+                <h4 class="poppinss">{{about.designation}}</h4>
+                <a href="{{ resume.resume.url }}"  target="_blank">
+                    <button class="btn poppins">Resume</button></a>
+                    
+            </div>
+        </div>
+        <div class="home-right flex s-center items-center">
+            <div class="circle flex s-center items-center" id="mainImage">
+               
+                <img src="{{profile_image.image.url}}" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1 class="t-center my-2 t-white f-2">About Me</h1>
+        <div class="about-container flex s-around ">
+            <div class=" about-left flex s-center items-center">
+                <!-- Here in src replade the given link with your secondary image link -->
+                <img src="{{about_image.image.url}}" alt="" style="width: 60%;">
+            </div>
+
+            <div class="about-right flex">
+                <div class="about-content">
+                    <h1 class="t-white m-b-1 poppins">{{about.name}}</h1>
+                    <p class="t-white poppins">{{about.about_me}}</p>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    
+    <!-- Footer Section -->
+    <footer id="footer">
+        <ul class="flex s-center w-80 m-auto my-2 res">
+            <li><a href="#home" class="poppinss">Home</a></li>
+            <li><a href="#about" class="poppinss">About</a></li>
+        </ul>
+        <ul class="flex s-center w-80 font-awesome ">
+            <a href="https://www.linkedin.com/in/priyansh-saxena-944812215/" target="_blank">
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+            </a>
+            <a href="https://github.com/PSEMPIRE" target="_blank">
+                <li><i class="fa-brands fa-github"></i></li>    
+        </ul>
+
+    </footer>
+     
+</body> 
+</html>
